@@ -1,24 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 body {
-  background: #f0c27b; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #f0c27b, #4b1248); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #f0c27b, #4b1248); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* Se ajustan las propiedades para ser más específicas  */
+  background-color: #f0c27b; /* fallback*/ 
+  background-image: linear-gradient(to right, #f0c27b, #4b1248); /* Se mantiene este detalle */
+  font-family: "Roboto", serif;
 }
 
-.formulario {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 400px;
+/* Se agregan estilos para el encabezado y titulo */
+header,
+.title-guest-list {
+  text-align: center;
+  color: wheat;
 }
 
-.formulario input, select {
+/* Se agregan estilos para el encabezado */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Se ajusta el nombre de las clases para coincidir con html y se agregan estilos */
+.form {
+  background-color:  #4b1248;
+  border: 2px solid wheat;
+  border-radius: 1.5rem;
+  max-width: 790px;
+  margin: 0 auto;
+  display: block;
+  padding: 2rem;
+}
+
+.form fieldset {
   border: none;
-  height: 20px;
-  border-radius: 5px;
+}
+
+.form legend {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.form label {
+  color: white;
+  margin-bottom: .5rem;
+  display: block;
+}
+
+.field {
+  border: none;
+  border-bottom: 3px solid #f0c27b;
+  color: #4b1248;
+  padding: 8px 0px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: .5rem;
 }
 
 .error {
   background-color: red;
+}
+
+/* Se agregane los estilos para el botón del formulario */
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn .btn-confirmar {
+  width: 50%;
+}
+
+.btn-confirmar {
+  background-color: #f0c27b;
+  border: none;
+  border-radius: .5rem;
+  color: #4b1248;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 .elemento-lista {

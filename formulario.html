@@ -11,9 +11,9 @@
   <!-- Uso de etiquetas semánticas header, main y section para una mejor accesibilidad -->
   <header>
     <h1>Bienvenidos a mi fiesta</h1>
-    <h2>Por favor, confirmar asistencia</h2>
+    <p>Por favor, confirmar asistencia</p> <!-- Se cambia la etiqueta h2 por un p -->
   </header>
-<main>
+<main class="container">
   <!--  Cambios en el form
     1. Agregar id a la etiqueta form y homologar el uso de inglés para los selectores
     2. Agrupar los campos en un fieldset
@@ -27,17 +27,17 @@
   <form id="form" class="form">
     <fieldset>
       <legend>Tu registro para la fiesta</legend>
-      <div class="form__field">
+      <div class="field__container">
         <label for="name"> Nombre(s):</label>
         <input type="text" name="name" id="name" class="field" required>
         <span id="nameError" class="error-message"></span>
       </div>
-      <div class="form__field">
+      <div class="field__container">
         <label for="age"> Edad:</label>
         <input type="number" name="age" id="age" class="field" min="21" max="40" required>
         <span id="ageError" class="error-message"></span>
       </div>
-      <div class="form__field">
+      <div class="field__container">
         <label for="nationality"> Nacionalidad</label>
         <select name="nationality" id="nationality" class="field" required>
           <option value="" disabled selected>Seleccione una opción</option>
@@ -49,12 +49,15 @@
         <span id="nationalityError" class="error-message"></span>
       </div>
     </fieldset>
-    <input type="submit" value="Confirmar asistencia"> <!-- Se añade atributo value para modificar el nombre -->
+    <div class="btn">
+      <input class="btn-confirmar" type="submit" value="Confirmar asistencia"> <!-- Se añade atributo value para modificar el nombre -->
+  </div>
+    <
   </form>
 </main>
 
 <section>
-  <h2>Lista de invitados</h2>
+  <h2 class="title-guest-list">Lista de invitados</h2>
   <ul id="guest-list"></ul> <!-- Se aplica el uso de una lista desordenada -->
 </section>
 
