@@ -1,40 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es"> <!-- Se  cambia el idioma -->
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" media="screen" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css"> <!-- Se eliminan atributos type y media -->
   <title>Formulario</title>
 </head>
 <body>
-  <h1>Bienvenidos a mi fiesta</h1>
-  <h2>Por favor, confirmar asistencia:</h2>
-
-  <form class="formulario">
-    Nombre <input type="text" name="name" id="name">
-    <br />
-    Edad <input type="number" name="age" id="age">
-    <br />
-
-    Nacionalidad
-    <select name="nationality" id="nationality">
-      <option value="ar">Argentina</option>
-      <option value="mx">Mexicana</option>
-      <option value="per">Peruana</option>
-      <option value="vnzl">Venezolana</option>
-    </select>
-    <br />
-    <input type="submit">
+  <!-- Uso de etiquetas semánticas header, main y section para una mejor accesibilidad -->
+  <header>
+    <h1>Bienvenidos a mi fiesta</h1>
+    <h2>Por favor, confirmar asistencia</h2>
+  </header>
+<main>
+  <!--  Cambios en el form
+    1. Agregar id a la etiqueta form y homologar el uso de inglés para los selectores
+    2. Agrupar los campos en un fieldset
+    3. Añadir etiqueta legend para mayor claridad y contexto.
+    4. Agrupar los elementos de cada campo dentro de un div para un mejor control del layout
+    5. Uso de label para el etiquetado de cada campo
+    6. Uso del atributo required para asegurar que no se pueda enviar el formulario sin completar la info.
+    7. Se agrega el elemento span para mensajes de error.
+    8. Uso de clases para aplicar estilos
+    -->
+  <form id="form" class="form">
+    <fieldset>
+      <legend>Tu registro para la fiesta</legend>
+      <div class="form__field">
+        <label for="name"> Nombre(s):</label>
+        <input type="text" name="name" id="name" class="field" required>
+        <span id="nameError" class="error-message"></span>
+      </div>
+      <div class="form__field">
+        <label for="age"> Edad:</label>
+        <input type="number" name="age" id="age" class="field" min="21" max="40" required>
+        <span id="ageError" class="error-message"></span>
+      </div>
+      <div class="form__field">
+        <label for="nationality"> Nacionalidad</label>
+        <select name="nationality" id="nationality" class="field" required>
+          <option value="" disabled selected>Seleccione una opción</option>
+          <option value="ar">Argentina</option>
+          <option value="mx">Mexicana</option>
+          <option value="per">Peruana</option>
+          <option value="vnzl">Venezolana</option>
+        </select>
+        <span id="nationalityError" class="error-message"></span>
+      </div>
+    </fieldset>
+    <input type="submit" value="Confirmar asistencia"> <!-- Se añade atributo value para modificar el nombre -->
   </form>
+</main>
 
-  <div>
-    <h2>Lista de invitados</h2>
+<section>
+  <h2>Lista de invitados</h2>
+  <ul id="guest-list"></ul> <!-- Se aplica el uso de una lista desordenada -->
+</section>
 
-  </div>
-
-  <script src="../formulario.js"></script>
+<script src="formulario.js"></script>
 </body>
 
 </html>
