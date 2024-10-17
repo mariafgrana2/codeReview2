@@ -59,7 +59,7 @@ header,
   margin-bottom: .5rem;
 }
 
-.error {
+.error-message {
   background-color: red;
 }
 
@@ -86,7 +86,7 @@ header,
   text-align: center;
 }
 
-.elemento-lista {
+.list-item {
   color: #4b1248;
   font-family: Verdana;
   margin: 10px 0;
@@ -97,7 +97,7 @@ header,
   margin: 20px
 }
 
-.elemento-lista input {
+.list-item input {
   border: none;
   background: none;
   color: #4b1248;
